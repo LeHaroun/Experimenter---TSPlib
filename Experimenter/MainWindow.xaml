@@ -1,0 +1,17 @@
+﻿<Window x:Class="Experimenter.MainWindow"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		Title="Ant Colony Optimization Engine" Height="320" Width="488" ResizeMode="NoResize" Icon="Excel.png" >
+	<Grid Margin="0,0,-6,0">
+		<Canvas x:Name="Run"> 
+		<ProgressBar x:Name="Progress" HorizontalAlignment="Left" Height="16.25" Margin="20,246,0,0" VerticalAlignment="Top" Width="430" Value="0" Foreground="#FF003AFF"/>
+		<Label x:Name="ProgressLabel" Content="" HorizontalAlignment="Left" Foreground="#FF333333" FontWeight="Bold" VerticalAlignment="Top" Canvas.Left="20" Canvas.Top="220.04" Width="430"/>
+		</Canvas>
+		
+		<Canvas x:Name="Drop" AllowDrop="True" Margin="20,25.04,38,65.21" DragEnter="Drop_DragEnter" DragLeave="Drop_DragLeave" Drop="Drop_Drop" DragOver="Drop_DragOver" >
+		<Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="189.04" Stroke="Black" VerticalAlignment="Top" Width="430" RadiusX="1" RadiusY="1"/>
+		<Image Source="Excel.png" Stretch="Fill" Width="100" Height="100" Canvas.Left="170" Canvas.Top="69"/>
+		<Label x:Name="InformationLabel" Content="Drop The Excel Template Here" HorizontalAlignment="Center" VerticalAlignment="Top" Width="430" FontSize="21.333" Foreground="#FF333333" FontWeight="Bold" Canvas.Top="5.626" HorizontalContentAlignment="Center"/>
+		</Canvas>
+	</Grid>
+</Window>
